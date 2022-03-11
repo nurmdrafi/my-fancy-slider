@@ -13,7 +13,7 @@ const sliderInterval = setInterval(() => {
     }
     const imrUrl = images[imgIndex];
     document.getElementById('image-container').innerHTML= `
-<img src="${images[imgIndex]}" alt="">
+<img src="${images[imgIndex]}" alt="" style="width: 800px; height: 600px;">
 `
     imgIndex++;
 }, 1000);
