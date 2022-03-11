@@ -5,8 +5,16 @@ const images = ['img/pic-1.jpg',
 'img/pic-5.jpg',
 'img/pic-6.jpg',
 'img/pic-7.jpg',
-]
-setInterval(() => {
-
-    console.log(new Date().getTime())
+];
+let imgIndex = 0;
+const sliderInterval = setInterval(() => {
+    if(imgIndex >= images.length){
+        imgIndex = 0;
+    }
+    const imrUrl = images[imgIndex];
+    document.getElementById('image-container').innerHTML= `
+<img src="${images[imgIndex]}" alt="">
+`
+    imgIndex++;
 }, 1000);
+
